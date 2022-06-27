@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'max-length-cycles'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=max-length-cycles",
+                    "--package=max-length-cycles"
+                ],
+                "filter": {
+                    "name": "max-length-cycles",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'max-length-cycles'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=max-length-cycles",
+                    "--package=max-length-cycles"
+                ],
+                "filter": {
+                    "name": "max-length-cycles",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
